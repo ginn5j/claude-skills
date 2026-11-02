@@ -30,7 +30,7 @@ rounds you spend. If a reference image exists, trace it.
 ## Usage
 
 ```sh
-python3 ~/.claude/skills/trace-to-svg/trace.py IMAGE [options]
+python3 "${CLAUDE_SKILL_DIR}/trace.py" IMAGE [options]
 ```
 
 Prints the path data to stdout; diagnostics go to stderr.
@@ -52,7 +52,7 @@ Prints the path data to stdout; diagnostics go to stderr.
 Always run with `--preview`, then screenshot it in headless Chrome and **look**:
 
 ```sh
-python3 ~/.claude/skills/trace-to-svg/trace.py art.png --preview /tmp/p.html > /tmp/path.txt
+python3 "${CLAUDE_SKILL_DIR}/trace.py" art.png --preview /tmp/p.html > /tmp/path.txt
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
   --screenshot=/tmp/p.png --window-size=420,300 --force-device-scale-factor=3 \
   --hide-scrollbars file:///tmp/p.html
