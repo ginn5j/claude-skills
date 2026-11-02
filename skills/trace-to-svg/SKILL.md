@@ -66,9 +66,10 @@ numbers.
 
 ## Tuning, in the order that pays
 
-1. **Resolution beats file format.** Going 360px → 720px separated fused shapes
-   and sharpened fine detail dramatically. Format matters much less than people
-   expect, because downscaling averages compression noise away.
+1. **Resolution beats file format.** A higher `--size` separates shapes that
+   fuse at low resolution and sharpens fine detail; 720 does this markedly
+   better than 360. Format matters much less than people expect, because
+   downscaling averages compression noise away.
 2. **But trace the original, not a re-export.** A lossy re-export blurs exactly
    the low-contrast boundaries the threshold depends on — and exports are often
    downsampled too, which compounds it. Ask for the source file.
